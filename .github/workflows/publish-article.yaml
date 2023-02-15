@@ -16,4 +16,5 @@ jobs:
         with:
           devto_key: ${{ secrets.DEVTO_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: "articles/**/*.md"
           branch: master
