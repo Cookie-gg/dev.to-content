@@ -11,3 +11,5 @@ Some random text with a [link](https://code.visualstudio.com).
 ## Serious title
 
 Add some text here and there!
+
+## Second title
