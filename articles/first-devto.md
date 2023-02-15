@@ -1,8 +1,14 @@
 ---
-title: "First article on Dev.to"
+title: Example article title
 published: false
-description: "This aritlce is about my first article on Dev.to"
-tags: markdown, dev.to
+description: A simple test article
+tags: "productivity, beginners, test"
+cover_image: ./assets/cat.jpg
+canonical_url: null
 ---
 
-Hi there.
+Some random text with a [link](https://code.visualstudio.com).
+
+## Serious title
+
+Add some text here and there!
