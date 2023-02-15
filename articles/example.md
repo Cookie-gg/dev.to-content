@@ -5,6 +5,7 @@ description: A simple test article
 tags: 'productivity, beginners, test'
 cover_image: ./assets/cat.jpg
 id: 1366053
+date: '2023-02-15T02:38:41Z'
 ---
 
 Some random text with a [link](https://code.visualstudio.com).
