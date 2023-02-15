@@ -7,18 +7,8 @@ cover_image: ./assets/cat.jpg
 ---
 
 Some random text with a [link](https://code.visualstudio.com).
-Some random text with a [link](https://code.visualstudio.com).
-Some random text with a [link](https://code.visualstudio.com).
-Some random text with a [link](https://code.visualstudio.com).
-Some random text with a [link](https://code.visualstudio.com).
-Some random text with a [link](https://code.visualstudio.com).
-Some random text with a [link](https://code.visualstudio.com).
 
 ## Serious title
-
-Add some text here and there!
-
-## Another title
 
 Add some text here and there!
 
