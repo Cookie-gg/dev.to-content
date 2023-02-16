@@ -23,9 +23,7 @@ glob(`../${process.env.FILES}`, async (_, files) => {
   // get unpublished all posts
   const { data: unpublishedPosts } = await axios.get<Post[]>(
     `${BASE_URL}/me/unpublished`,
-    {
-      headers: { "api-key": `${process.env.DEVTO_KEY}` },
-    }
+    { headers: { "api-key": `${process.env.DEVTO_KEY}` } }
   );
 
   await Promise.all(
@@ -53,7 +51,7 @@ glob(`../${process.env.FILES}`, async (_, files) => {
         );
         if (!post) return;
 
-        metaData.slug = post.slug;
+        metaData.slug = post.slug + "/edit";
       } else {
         const { data: post } = await axios.get<Post>(
           `${BASE_URL}/${metaData.id}`
