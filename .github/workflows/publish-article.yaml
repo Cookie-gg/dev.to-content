@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: cd ./scripts & yarn
       - name: Get article slugs
-        run: DEVTO_KEY="${{ secrets.DEVTO_TOKEN }}" FILES="${{ env.FILES }}" yarn ts-node ./index.ts
+        run: cd ./scripts && DEVTO_KEY="${{ secrets.DEVTO_TOKEN }}" FILES="${{ env.FILES }}" yarn ts-node ./index.ts
       - name: Create new commit
         run: git config user.name "dev.to getting slug bot"
           git config user.email "cookie.gg.dev@gmail.com"
