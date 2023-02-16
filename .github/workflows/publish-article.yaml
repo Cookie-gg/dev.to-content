@@ -25,7 +25,7 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v3.5.1
       - name: Install Dependencies
-        run: cd ./scripts & yarn
+        run: cd ./scripts && yarn
       - name: Get article slugs
         run: cd ./scripts && DEVTO_KEY="${{ secrets.DEVTO_TOKEN }}" FILES="${{ env.FILES }}" yarn ts-node ./index.ts
       - name: Create new commit
