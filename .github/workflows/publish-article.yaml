@@ -29,8 +29,8 @@ jobs:
       - name: Get article slugs
         run: cd ./scripts && DEVTO_KEY="${{ secrets.DEVTO_TOKEN }}" FILES="${{ env.FILES }}" yarn ts-node ./index.ts
       - name: Create new commit
-        run: git config user.name "dev.to getting slug bot"
-          git config user.email "cookie.gg.dev@gmail.com"
-          git add .
-          git commit -m "[bot] get a slug of each posts"
+        run: git config user.name "dev.to getting slug bot" &&
+          git config user.email "cookie.gg.dev@gmail.com" &&
+          git add . &&
+          git commit -m "[bot] get a slug of each posts" &&
           git push
