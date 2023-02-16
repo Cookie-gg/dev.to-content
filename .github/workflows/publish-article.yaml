@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  FILES: "articles/**/*.md"
+
 jobs:
   publish:
     name: publish
@@ -16,6 +19,14 @@ jobs:
         with:
           devto_key: ${{ secrets.DEVTO_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          files: "articles/**/*.md"
+          files: ${{ env.FILES }}
           conventional_commits: true
           branch: master
+      - name: Get article slugs
+        run: DEVTO_KEY="${{ secrets.DEVTO_TOKEN }}" FILES="${{ env.FILES }}" yarn ts-node ./index.ts
+      - name: Create new commit
+        run: git config user.name "dev.to getting slug bot"
+          git config user.email "cookie.gg.dev@gmail.com"
+          git add .
+          git commit -m "[bot] get a slug of each posts"
+          git push
